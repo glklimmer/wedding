@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Wedding</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .vibes {
+        font-family: "Great Vibes", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body {
+        background-color: #f5f5dc; /* Cream white */
+      }
+
+      /* Floral transition between sections */
+      .floral-transition {
+        background: url("./pictures/flowers.png") no-repeat center;
+        background-size: 80px;
+        height: 80px;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-gray-800 scroll-smooth">
+    <!-- Title Section -->
+    <section>
+      <img src="./pictures/wenkenpark.jpg" alt="Wenkenpark" class="w-full" />
+    </section>
+    <section
+      class="bg-teal-100 py-12"
+      style="
+        background-image: url(&quot;./pictures/de-lis.png&quot;);
+        background-repeat: repeat;
+        background-position: center;
+        background-size: 80px 80px;
+      "
+    >
+      <div class="container mx-auto text-center vibes">
+        <h1 class="text-6xl font-bold mb-4">Wir heiraten!</h1>
+        <img
+          src="./pictures/biel.jpeg"
+          alt="Wedding Picture"
+          class="mx-auto rounded shadow max-w-full max-w-xl mb-6 mt-2"
+        />
+        <p class="text-3xl">10.09.2025</p>
+      </div>
+    </section>
+
+    <!-- Floral Transition -->
+    <div class="floral-transition"></div>
+
+    <!-- Wedding Details Section -->
+    <section class="bg-teal-100 py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-8">Hochzeit</h2>
+
+        <!-- Location & Directions -->
+        <div class="mb-12 flex flex-wrap">
+          <div class="w-full xl:w-1/2">
+            <img
+              src="./pictures/wenkenpark.jpg"
+              alt="Location Picture"
+              class="mx-auto rounded shadow mb-4 max-w-full max-w-xl"
+            />
+          </div>
+          <div class="w-full md:w-1/2 pl-0 md:pl-8">
+            <h3 class="text-3xl font-semibold mb-4">Adresse</h3>
+            <p>Reithalle Wenkenhof</p>
+            <p>Hellring 41</p>
+            <p>4125 Riehen</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- By Car -->
+          <div class="text-center">
+            <h4 class="text-2xl font-medium mb-2">Parkplätze</h4>
+            <img
+              src="./pictures/parking.png"
+              alt="Parking"
+              class="mx-auto rounded shadow"
+            />
+          </div>
+          <!-- Maps -->
+          <div class="text-center">
+            <h4 class="text-2xl font-medium mb-2">Maps</h4>
+            <div
+              style="
+                overflow: hidden;
+                max-width: 100%;
+                width: 500px;
+                height: 500px;
+              "
+            >
+              <iframe
+                style="height: 100%; width: 100%; border: 0"
+                frameborder="0"
+                src="https://www.google.com/maps/embed/v1/place?q=Reithalle+Wenkenhof,+Hellring,+Riehen,+Switzerland&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Date & Schedule -->
+      <div class="mb-12 text-center">
+        <p class="text-xl mb-4">Hochzeitsdatum: 10.09.2025</p>
+        <h3 class="text-3xl font-semibold mb-4">Schedule</h3>
+        <ul class="space-y-2">
+          <li>13:30 - Welcome</li>
+          <li>14:00 - Wedding Ceremony</li>
+          <li>15:00 - Coffee and Cake</li>
+          <li>18:00 - Dinner</li>
+          <li>21:00 - Party</li>
+        </ul>
+      </div>
+
+      <!-- Dresscode -->
+      <div class="text-center">
+        <h3 class="text-3xl font-semibold mb-4">Dresscode</h3>
+        <p class="mb-4">
+          We kindly ask you to dress in style. Here are some suggested colors:
+        </p>
+        <div class="flex justify-center space-x-4">
+          <div class="w-12 h-12 rounded-full bg-teal-500"></div>
+          <div
+            class="w-12 h-12 rounded-full bg-white border-2 border-teal-500"
+          ></div>
+          <div class="w-12 h-12 rounded-full bg-gray-200"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floral Transition -->
+    <div class="floral-transition"></div>
+
+    <!-- Invitation Response Form Section -->
+    <section class="bg-white py-12">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-6">RSVP</h2>
+        <form action="#" method="POST" class="max-w-xl mx-auto space-y-4">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            class="w-full px-4 py-2 border rounded"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            class="w-full px-4 py-2 border rounded"
+            required
+          />
+          <textarea
+            name="message"
+            rows="4"
+            placeholder="Message"
+            class="w-full px-4 py-2 border rounded"
+          ></textarea>
+          <button
+            type="submit"
+            class="px-6 py-2 bg-teal-500 text-white rounded hover:bg-teal-600"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Floral Transition -->
+    <div class="floral-transition"></div>
+
+    <!-- Present Wish Section -->
+    <section class="bg-teal-100 py-12">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6">Present Wish</h2>
+        <p class="mb-4">
+          Your presence is the greatest gift, but if you wish to give a present,
+          here is our wish list:
+        </p>
+        <p>[Payment details or instructions]</p>
+      </div>
+    </section>
+
+    <!-- Floral Transition -->
+    <div class="floral-transition"></div>
+
+    <!-- Contact Section -->
+    <section class="bg-white py-12">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6">Contact</h2>
+        <p class="mb-2">
+          <strong>Best Man:</strong> John Doe –
+          <a href="tel:+1234567890" class="text-teal-500">+1 234 567 890</a>
+        </p>
+        <p>
+          <strong>Bridesmaid:</strong> Jane Smith –
+          <a href="tel:+0987654321" class="text-teal-500">+0 987 654 321</a>
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
