@@ -417,15 +417,59 @@
     <section class="bg-white py-12">
       <div class="container mx-auto text-center">
         <h2 class="text-4xl font-bold mb-6">Trauzeugen</h2>
-        <p class="mb-2">
-          <strong>Best Man:</strong> John Doe –
-          <a href="tel:+1234567890" class="text-teal-500">+1 234 567 890</a>
-        </p>
-        <p>
-          <strong>Bridesmaid:</strong> Jane Smith –
-          <a href="tel:+0987654321" class="text-teal-500">+0 987 654 321</a>
-        </p>
+
+        <strong>Brautjungfern:</strong>
+        <div class="mb-6">
+          <div>
+            Melanie –
+            <a
+              id="braidsmaid1-phone"
+              class="phone-reveal text-teal-600"
+              href="#"
+            >
+              show number
+            </a>
+          </div>
+
+          <div>
+            Nicole –
+            <a
+              id="braidsmaid2-phone"
+              class="phone-reveal text-teal-600"
+              href="#"
+            >
+              show number
+            </a>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <strong>Trauzeuge:</strong>
+          <div>
+            Jerome –
+            <a id="bestman-phone" class="phone-reveal text-teal-600" href="#">
+              show number
+            </a>
+          </div>
+        </div>
       </div>
+
+      <script>
+        // define all the phone numbers here, keyed by the link’s id
+        const phoneMap = {
+          "bestman-phone": ["078", "797", "88", "98"],
+          "braidsmaid1-phone": ["079", "541", "60", "04"],
+          "braidsmaid2-phone": ["079", "421", "85", "19"],
+        };
+
+        Object.entries(phoneMap).forEach(([id, parts]) => {
+          const a = document.getElementById(id);
+          const display = parts.join(" ");
+          const href = "tel:" + parts.join("");
+          a.textContent = display;
+          a.href = href;
+        });
+      </script>
     </section>
   </body>
 </html>
